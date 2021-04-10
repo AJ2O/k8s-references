@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-ns-pod
+  namespace: my-ns
+  labels:
+    app: my-app
+spec:
+  containers:
+    - first-container:
+      image: busybox
+      command: ['sh', '-c', 'Hello from Container One in My namespace! && sleep 300s']
