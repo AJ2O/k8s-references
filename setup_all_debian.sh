@@ -37,7 +37,7 @@ cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 
-# install kubeadm, kubelet, and kubectl, and prevent unintentional updates
+# install kubeadm, kubelet, and kubectl (v1.20.1), and prevent unintentional updates
 sudo apt-get update
 sudo apt-get install -y kubelet=1.20.1-00 kubeadm=1.20.1-00 kubectl=1.20.1-00
 sudo apt-mark hold kubelet kubeadm kubectl
